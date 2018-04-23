@@ -1,0 +1,21 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("Export", "Home")) {
+    
+    @Html.DevExpress().Button(settings => {
+    settings.Name = "btExport";
+    settings.Text = "Export to PDF";
+    settings.UseSubmitBehavior = true;
+}).GetHtml()
+
+    
+    <h3>
+        Products Grid</h3>      
+    @Html.Action("GridViewPartial")
+
+    
+    <h3>
+        Pivot Grid</h3>
+    @Html.Action("PivotGrid1Partial")
+}
