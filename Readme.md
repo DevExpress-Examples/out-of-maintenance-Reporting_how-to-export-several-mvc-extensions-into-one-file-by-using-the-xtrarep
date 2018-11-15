@@ -1,3 +1,13 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[HomeController.cs](./CS/T167275/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/T167275/Controllers/HomeController.vb))**
+* [Product.cs](./CS/T167275/Models/Product.cs) (VB: [Product.vb](./VB/T167275/Models/Product.vb))
+* [SampleReport.cs](./CS/T167275/Reports/SampleReport.cs) (VB: [SampleReport.vb](./VB/T167275/Reports/SampleReport.vb))
+* [_GridViewPartial.cshtml](./CS/T167275/Views/Home/_GridViewPartial.cshtml)
+* [_PivotGrid1Partial.cshtml](./CS/T167275/Views/Home/_PivotGrid1Partial.cshtml)
+* [Index.cshtml](./CS/T167275/Views/Home/Index.cshtml)
+<!-- default file list end -->
 # How to export several MVC extensions into one file by using the XtraReports Suite
 
 
