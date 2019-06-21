@@ -9,6 +9,9 @@
 * [Index.cshtml](./CS/T167275/Views/Home/Index.cshtml)
 <!-- default file list end -->
 # How to export several MVC extensions into one file by using the XtraReports Suite
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t167275)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to export several MVC extensions that support the export of IPrintable documents (<a href="https://documentation.devexpress.com/AspNet/CustomDocument8998.aspx">GridView</a>, <a href="https://documentation.devexpress.com/AspNet/CustomDocument10690.aspx">PivotGrid</a>, <a href="https://documentation.devexpress.com/AspNet/CustomDocument13766.aspx">TreeList</a>) into one file by using the XtraReports Suite functionality.</p>
