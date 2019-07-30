@@ -10,7 +10,7 @@
 <!-- default file list end -->
 # How to export several MVC extensions into one file by using the XtraReports Suite
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t167275)**
+**[[Run Online]](https://codecentral.devexpress.com/t167275/)**
 <!-- run online end -->
 
 
