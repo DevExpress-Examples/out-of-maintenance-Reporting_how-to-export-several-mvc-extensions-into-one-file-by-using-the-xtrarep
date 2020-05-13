@@ -32,8 +32,8 @@ Namespace T167275.Controllers
 
 		Public Function Export() As ActionResult
 			Dim model = Product.GetProducts()
-			Dim gridViewPrintable As IPrintable = GridViewExtension.CreatePrintableObject(ViewsHelper.CreateGridViewSettings(), model)
-			Dim pivotGridPrintable As IPrintable = PivotGridExtension.CreatePrintableObject(ViewsHelper.CreatePivotGridSettings(), model)
+			Dim gridViewPrintable As IBasePrintable = GridViewExtension.CreatePrintableObject(ViewsHelper.CreateGridViewSettings(), model)
+			Dim pivotGridPrintable As IBasePrintable = PivotGridExtension.CreatePrintableObject(ViewsHelper.CreatePivotGridSettings(), model)
 
 			Dim report As XtraReport = New SampleReport(gridViewPrintable, pivotGridPrintable)
 

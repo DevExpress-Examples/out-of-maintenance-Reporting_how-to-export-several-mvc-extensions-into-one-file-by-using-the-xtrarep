@@ -7,7 +7,7 @@ using DevExpress.XtraPrinting;
 
 namespace T167275.Reports {
     public partial class SampleReport : DevExpress.XtraReports.UI.XtraReport {
-        public SampleReport(IPrintable gridViewPrintable, IPrintable pivotGridPrintable) {
+        public SampleReport(IBasePrintable gridViewPrintable, IBasePrintable pivotGridPrintable) {
             InitializeComponent();
             pcGridView.PrintableComponent = gridViewPrintable;
             pcPivotGrid.PrintableComponent = pivotGridPrintable;

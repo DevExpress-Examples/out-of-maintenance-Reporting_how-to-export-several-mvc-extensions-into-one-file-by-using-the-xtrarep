@@ -9,7 +9,7 @@ Namespace T167275.Reports
 	Partial Public Class SampleReport
 		Inherits DevExpress.XtraReports.UI.XtraReport
 
-		Public Sub New(ByVal gridViewPrintable As IPrintable, ByVal pivotGridPrintable As IPrintable)
+		Public Sub New(ByVal gridViewPrintable As IBasePrintable, ByVal pivotGridPrintable As IBasePrintable)
 			InitializeComponent()
 			pcGridView.PrintableComponent = gridViewPrintable
 			pcPivotGrid.PrintableComponent = pivotGridPrintable

@@ -30,8 +30,8 @@ namespace T167275.Controllers {
 
         public ActionResult Export() {
             var model = Product.GetProducts();
-            IPrintable gridViewPrintable = GridViewExtension.CreatePrintableObject(ViewsHelper.CreateGridViewSettings(), model);
-            IPrintable pivotGridPrintable = PivotGridExtension.CreatePrintableObject(ViewsHelper.CreatePivotGridSettings(), model);
+            IBasePrintable gridViewPrintable = GridViewExtension.CreatePrintableObject(ViewsHelper.CreateGridViewSettings(), model);
+            IBasePrintable pivotGridPrintable = PivotGridExtension.CreatePrintableObject(ViewsHelper.CreatePivotGridSettings(), model);
 
             XtraReport report = new SampleReport(gridViewPrintable, pivotGridPrintable);
 
