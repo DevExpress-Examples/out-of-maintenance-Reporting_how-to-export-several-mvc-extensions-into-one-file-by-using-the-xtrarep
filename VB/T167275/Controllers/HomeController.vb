@@ -70,21 +70,22 @@ Namespace T167275.Controllers
 				Dim settings As New PivotGridSettings()
 				settings.Name = "PivotGrid1"
 				settings.CallbackRouteValues = New With {Key .Controller = "Home", Key .Action = "PivotGrid1Partial"}
+				settings.OptionsData.DataProcessingEngine = PivotDataProcessingEngine.Optimized
 
 				settings.Fields.Add(Sub(field)
 					field.Area = PivotArea.RowArea
-					field.FieldName = "SupplierID"
-					field.Caption = "SupplierID"
+										field.DataBinding = New DataSourceColumnBinding("SupplierID")
+										field.Caption = "SupplierID"
 				End Sub)
 				settings.Fields.Add(Sub(field)
 					field.Area = PivotArea.ColumnArea
-					field.FieldName = "CategoryID"
-					field.Caption = "CategoryID"
+										field.DataBinding = New DataSourceColumnBinding("CategoryID")
+										field.Caption = "CategoryID"
 				End Sub)
 				settings.Fields.Add(Sub(field)
 					field.Area = PivotArea.DataArea
-					field.FieldName = "UnitsInStock"
-					field.Caption = "UnitsInStock"
+										field.DataBinding = New DataSourceColumnBinding("UnitsInStock")
+										field.Caption = "UnitsInStock"
 				End Sub)
 				Return settings
 			End Function

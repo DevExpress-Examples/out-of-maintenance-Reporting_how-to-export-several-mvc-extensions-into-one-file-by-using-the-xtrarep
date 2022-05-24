@@ -46,7 +46,6 @@ namespace T167275.Controllers {
                 GridViewSettings settings = new GridViewSettings();
                 settings.Name = "GridView";
                 settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
-
                 settings.KeyFieldName = "ProductID";
 
                 settings.Columns.Add("ProductID");
@@ -63,21 +62,22 @@ namespace T167275.Controllers {
             public static PivotGridSettings CreatePivotGridSettings() {
                 PivotGridSettings settings = new PivotGridSettings();
                 settings.Name = "PivotGrid1";
+                settings.OptionsData.DataProcessingEngine = PivotDataProcessingEngine.Optimized;
                 settings.CallbackRouteValues = new { Controller = "Home", Action = "PivotGrid1Partial" };
 
                 settings.Fields.Add(field => {
                     field.Area = PivotArea.RowArea;
-                    field.FieldName = "SupplierID";
+                    field.DataBinding=new DataSourceColumnBinding("SupplierID");
                     field.Caption = "SupplierID";
                 });
                 settings.Fields.Add(field => {
                     field.Area = PivotArea.ColumnArea;
-                    field.FieldName = "CategoryID";
+                    field.DataBinding = new DataSourceColumnBinding("CategoryID");
                     field.Caption = "CategoryID";
                 });
                 settings.Fields.Add(field => {
                     field.Area = PivotArea.DataArea;
-                    field.FieldName = "UnitsInStock";
+                    field.DataBinding = new DataSourceColumnBinding("UnitsInStock");
                     field.Caption = "UnitsInStock";
                 });
                 return settings;
